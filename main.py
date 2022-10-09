@@ -7,11 +7,12 @@ for i in range(len(value)):
     values.append(value[i])
 
 for i in range(len(values)):
-    min = -1
+    min = i
     for k in range(i,len(values),1):
-        if int(values[i]) > int(values[k]):
+        if int(values[min]) > int(values[k]):
             min = k
-    if min == -1:
+    if min == 0:
+        print(values)
         continue
     else:
         temp = values[i]
